@@ -1,0 +1,26 @@
+.list-skill-container {
+  margin-bottom: 3.5rem;
+  padding: 1rem 2rem;
+}
+
+.keterangan-skill {
+  margin-left: 120px;
+}
+
+.logo-skill img {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+
+.list-skill span {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.keterangan-skill li {
+  list-style: none;
+  margin-left: 20px;
+  font-size: 16px;
+}

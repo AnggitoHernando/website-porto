@@ -1,0 +1,92 @@
+#modalBackground {
+  overflow: auto;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  transition: all 0.5s ease-in-out;
+}
+
+/* Modal Content/Box */
+.modalContent {
+  background-color: white;
+  overflow: auto;
+  box-shadow: 2px 2px 15px white inset;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 2rem;
+  border: 2px solid #004fed;
+  width: 80%; /* Could be more or less, depending on screen size */
+  border-radius: 15px;
+  transition: all 0.5s ease-in-out;
+}
+
+.card {
+  width: 190px;
+  height: 254px;
+
+  border: 2px solid #07ff07;
+  box-shadow: 2px 2px 15px #000000 inset;
+  text-align: center;
+  color: #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Pacifico";
+}
+
+.modalContent:hover {
+  box-shadow: 2px 2px 15px #004fed inset;
+}
+
+.close {
+  width: 2rem;
+  position: relative;
+  height: 2rem;
+  border: 3px ridge #004fed;
+  outline: none;
+  background-color: transparent;
+  color: #404040;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 20px;
+  font-weight: bold;
+  float: right;
+}
+
+.close::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: white;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+.close::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.close:hover::before,
+.close:hover::after {
+  transform: scale(0);
+}
+
+.close:hover {
+  box-shadow: inset 0px 0px 25px #004fed;
+  cursor: pointer;
+}
