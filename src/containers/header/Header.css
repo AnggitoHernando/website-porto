@@ -130,7 +130,7 @@
   }
 
   .portofolio__navbar {
-    padding: 1rem;
+    padding: 1rem 0 1rem 1rem;
   }
 }
 
@@ -205,5 +205,16 @@
   .menu-header {
     position: relative;
     left: 80px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .portofolio__navbar-menu_container {
+    left: 150px;
+    top: -20px;
+  }
+
+  .portofolio__navbar-menu_container p {
+    width: 120px;
   }
 }

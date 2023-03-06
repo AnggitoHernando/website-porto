@@ -20,7 +20,59 @@
 }
 
 .keterangan-skill li {
+  margin-top: 15px;
   list-style: none;
   margin-left: 20px;
   font-size: 16px;
+}
+
+@media screen and (max-width: 300px) {
+  .list-skill-container {
+    margin-bottom: 1.5rem;
+    margin-top: 20px;
+    padding: 1rem;
+  }
+
+  .logo-skill img {
+    margin-bottom: 20px;
+    margin-right: 60px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .keterangan-skill {
+    margin-left: 0px;
+  }
+
+  .keterangan-skill span {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+
+  .keterangan-skill li {
+    margin-top: 10px;
+    margin-left: 0;
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 700px) {
+  .logo-skill img {
+    margin-bottom: 20px;
+    margin-right: 100%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .keterangan-skill {
+    margin-left: 0;
+  }
+
+  .list-skill-container {
+    margin-bottom: 1.5rem;
+  }
+
+  .keterangan-skill li {
+    margin: 10px 0;
+  }
 }

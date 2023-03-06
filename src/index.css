@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap");
 
 :root {
-  --font-family: 'Montserrat', sans-serif;
+  --font-family: "Montserrat", sans-serif;
 
-  --gradient-text: linear-gradient(89.97deg, #846767 1.84%, #F49867 102.67%);
-  --gradient-bar: linear-gradient(103.22deg, #846767 -13.86%, #F49867 99.55%);
-  
+  --gradient-text: linear-gradient(89.97deg, #004fed 1.84%, #f49867 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #004fed -13.86%, #f49867 99.55%);
+
   --color-bg: white;
-  --color-primer: #004FED;
-  --color-footer : #ffffff;
+  --color-primer: #004fed;
+  --color-footer: #ffffff;
   --color-black: #404040;
-  --color-black-pekat:black;
-} 
+  --color-black-pekat: black;
+}

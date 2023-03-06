@@ -1,21 +1,16 @@
-import * as ReactDOM from "react-dom/client";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import "./AboutMe.css";
 import pp from "../../assets/pp.png";
 import analyst_logo from "../../assets/analyst 1.png";
 import uiuxLogo from "../../assets/ux-design 1.png";
 import progammerLogo from "../../assets/computer 1.png";
 import otherLogo from "../../assets/Vector.png";
-import laravel1 from "../../assets/laravel.png";
 import Modal from "../modals/Modal";
 import Skill from "../skills/Skill";
 import Button from "../modals/Button";
-import Modals from "../modals/Modal";
 
 export default function AboutMe() {
-  const ref = useRef([]);
   const [show, setOpen] = useState(true);
-  const [isActive, setIsActive] = useState(false);
 
   const handleClose = (event) => {
     const buttonId = event.currentTarget.id;
@@ -154,7 +149,32 @@ export default function AboutMe() {
                 id="modalUiUx"
                 onClose={(event) => handleClose(event)}
                 show={show}
-                modalContent={"AAAA"}
+                modalContent={[
+                  <Skill
+                    key="1"
+                    judul="Figma"
+                    keterangan="I usually design applications using figma. In designing applications, I can start from the design thinking stage, wireframe, design to application design testing."
+                    image="/skills/figma.png"
+                  />,
+                  <Skill
+                    key="2"
+                    judul="Whimsical"
+                    keterangan="I usually use this whimsical application to create wireframes or what is better known as a rough outline of a design. Although sometimes I also use figma to make wireframes"
+                    image="/skills/whim.png"
+                  />,
+                  <Skill
+                    key="3"
+                    judul="Maze Design"
+                    keterangan="I usually use this maze design application to do a test of the application design. The testing aims to find out whether a design made can be understood by the user or users of the application."
+                    image="/skills/maze.png"
+                  />,
+                  <Skill
+                    key="4"
+                    judul="Photoshop"
+                    keterangan="In photoshop I master the basic things of Photoshop such as layers, colors and other basic editing things."
+                    image="/skills/ps.png"
+                  />,
+                ]}
               />
             </div>
             <div id="value-Progammer" style={{ display: "none" }}>
@@ -162,7 +182,38 @@ export default function AboutMe() {
                 id="modalProgammer"
                 onClose={(event) => handleClose(event)}
                 show={show}
-                modalContent={"222"}
+                modalContent={[
+                  <Skill
+                    key="1"
+                    judul="Java Script"
+                    keterangan="In javascript, I mastered the basics of javascript to crud (create, read, update, delete) and I also mastered several libraries."
+                    image="/skills/js.png"
+                  />,
+                  <Skill
+                    key="2"
+                    judul="Java Script"
+                    keterangan="In PHP, I mastered the basics of PHP native to making crud applications (create read, update, delete), login and register, and I also mastered several frameworks from PHP."
+                    image="/skills/php.png"
+                  />,
+                  <Skill
+                    key="3"
+                    judul="Laravel"
+                    keterangan="Laravel is a framework from PHP, just like PHP, I have mastered it from the basics of Laravel to making crud applications (create read update delete), login, register and laravel api."
+                    image="/skills/laravel.png"
+                  />,
+                  <Skill
+                    key="4"
+                    judul="Code Igniter"
+                    keterangan="Codeigniter is a framework from PHP, just like PHP and Laravel, I mastered from the basics of code igniter to making crud applications (create read update delete)."
+                    image="/skills/ci.png"
+                  />,
+                  <Skill
+                    key="5"
+                    judul="React"
+                    keterangan="React is a library in the JavaScript programming language. In React I master basic things like components, react routers and other basic things."
+                    image="/skills/react.png"
+                  />,
+                ]}
               />
             </div>
             <div id="value-Other" style={{ display: "none" }}>
@@ -170,7 +221,20 @@ export default function AboutMe() {
                 id="modalOther"
                 onClose={(event) => handleClose(event)}
                 show={show}
-                modalContent={"2322"}
+                modalContent={[
+                  <Skill
+                    key="1"
+                    judul="Can Use Microsoft Office"
+                    keterangan="."
+                    image="/skills/office.png"
+                  />,
+                  <Skill
+                    key="2"
+                    judul="Little Understanding of IT Management"
+                    keterangan="Little understanding of IT management such as IT auditing, Enterprise Architecture because I have studied it in college."
+                    image="/skills/other.png"
+                  />,
+                ]}
               />
             </div>
           </div>

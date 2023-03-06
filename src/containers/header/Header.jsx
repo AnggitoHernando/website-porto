@@ -1,39 +1,17 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import "./Header.css";
 
-const Menu = () => (
-  <>
-    <div className="menu-header">
-      <p className="active">
-        <a href="#AboutMe">About Me</a>
-      </p>
-      <p>
-        <a href="#MyProjects">My Projects</a>
-      </p>
-      <p>
-        <a href="#Contact">Contact</a>
-      </p>
-    </div>
-  </>
-);
-
-const ListMenu = [
-  { name: "AboutMe", href: "/" },
-  { name: "MyProjects", href: "/MyProjects" },
-  { name: "Contact", href: "/Contact" },
-];
-
-const Archzone = () => (
-  <>
-    <span className="Arch"> Arch </span>
-    <span className="Zone"> Zone </span>
-  </>
-);
-
-const Header = () => {
+export default function Header(props) {
+  const Archzone = () => (
+    <>
+      <span className="Arch"> Arch </span>
+      <span className="Zone"> Zone </span>
+    </>
+  );
   const [toogleMenu, setTooggleMenu] = useState(false);
+
   return (
     <div className="portofolio__navbar">
       <div className="portofolio__navbar-links">
@@ -41,7 +19,32 @@ const Header = () => {
           <Archzone />
         </div>
         <div className="portofolio__navbar-links_container">
-          <Menu />
+          <div className="menu-header">
+            <p>
+              <NavLink
+                to={"/"}
+                className={({ isActive }) => (isActive ? "active" : "inactive")}
+              >
+                About Me
+              </NavLink>
+            </p>
+            <p>
+              <NavLink
+                to={"/MyProject"}
+                className={({ isActive }) => (isActive ? "active" : "inactive")}
+              >
+                Portofolio
+              </NavLink>
+            </p>
+            <p>
+              <NavLink
+                to={"/Contact"}
+                className={({ isActive }) => (isActive ? "active" : "inactive")}
+              >
+                Contact
+              </NavLink>
+            </p>
+          </div>
         </div>
         <div className="portofolio__navbar-menu">
           {toogleMenu ? (
@@ -60,7 +63,38 @@ const Header = () => {
           {toogleMenu && (
             <div className="portofolio__navbar-menu_container scale-up-center">
               <div className="portofolio__navbar-menu_container-links">
-                <Menu />
+                <div className="menu-header">
+                  <p>
+                    <NavLink
+                      to={"/"}
+                      className={({ isActive }) =>
+                        isActive ? "active" : "inactive"
+                      }
+                    >
+                      About Me
+                    </NavLink>
+                  </p>
+                  <p>
+                    <NavLink
+                      to={"/MyProject"}
+                      className={({ isActive }) =>
+                        isActive ? "active" : "inactive"
+                      }
+                    >
+                      Portofolio
+                    </NavLink>
+                  </p>
+                  <p>
+                    <NavLink
+                      to={"/Contact"}
+                      className={({ isActive }) =>
+                        isActive ? "active" : "inactive"
+                      }
+                    >
+                      Contact
+                    </NavLink>
+                  </p>
+                </div>
               </div>
             </div>
           )}
@@ -68,6 +102,4 @@ const Header = () => {
       </div>
     </div>
   );
-};
-
-export default Header;
+}
