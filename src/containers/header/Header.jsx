@@ -6,7 +6,7 @@ import "./Header.css";
 export default function Header(props) {
   const Archzone = () => (
     <>
-      <span className="Arch"> Arch </span>
+      <span className="Arch"> Itto </span>
       <span className="Zone"> Zone </span>
     </>
   );

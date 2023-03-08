@@ -56,11 +56,13 @@ export default function AboutMe() {
           <div className="box"></div>
           <div className="biodata">
             <img src={pp} alt="" />
-            <p>Name : Nando</p>
+            <p>Name : Anggito Hernando</p>
             <p>Age : 22 Years Old</p>
             <p>Nationality : Indonesian</p>
             <p className="button-download">
-              <a href="#">Download CV</a>
+              <a href="https://drive.google.com/drive/folders/1N2W6Q-5iR0Bornuq6USqsOoztqkre0on?usp=sharing">
+                Download CV
+              </a>
             </p>
           </div>
         </div>
@@ -68,7 +70,8 @@ export default function AboutMe() {
       <div className="kanan-container">
         <div className="deskrpsi">
           <p>
-            Hi I'm a graduate of information systems looking for a job. I am a
+            Hi I'm a graduate of information systems looking for a job. I am
+            interest in a system analyst, UI UX Designer and Progammer. I am a
             person who likes to learn new things, passionate, responsible and
             honest. My weakness, I am not fluent when I speak in front of many
             people. Here's what I'm good at
@@ -191,7 +194,7 @@ export default function AboutMe() {
                   />,
                   <Skill
                     key="2"
-                    judul="Java Script"
+                    judul="PHP Native"
                     keterangan="In PHP, I mastered the basics of PHP native to making crud applications (create read, update, delete), login and register, and I also mastered several frameworks from PHP."
                     image="/skills/php.png"
                   />,
